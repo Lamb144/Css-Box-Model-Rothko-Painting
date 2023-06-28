@@ -3,3 +3,111 @@
 Even though your <div> has no text, it's still treated as a box with content. Write a CSS rule that uses
 .canvas class selector and sets it width to 500 pixels. Here's a Css rule that sets the width of the class
 card to 300 pixels:*/
+/* Then add the height property with the value 600px to your .canvas */
+/* Change the background-color of the canvas to #4d0f00 */
+.canvas {
+    width: 500px;
+    height: 600px;
+    background-color: #4d0f00;
+    /* adding padding of 1px to the .canvas element to give the .one element somthing solid to push off of
+     padding: 1px;( This was removed and replaced by the below property.*/
+     overflow: hidden;
+     /* The colors and shapes of the painting are too sharp to pass as a Rothko
+     Use the filter property to blur the painting by 2px in the .canvas element. */
+     filter: blur(2px);
+    
+}
+/* Write a new rule using the .frame class selector.
+Use the border shorthand declaration to giver the ,frame element a solid, black border with the width of 50px. */
+.frame {
+    border: 50px solid black;
+    /* the frame was to wide therefore the width has been set yo 500px */
+    width: 500px;
+    /* Use padding to adjust the spacing within an element. */
+ /* In .frame,use the padding shorthand property to increase the space between the .frame and .canvas elements by 50px.
+ The shorthand will increse space in the top, bottom, left and right of the element's border and canvas within. */
+   padding: 50px;
+ /* Use margins to adjust the spacing outside of an element.
+ Using the matgin property, give the .frame element vertical margin of 20px, and horizontal margin of auto. This will move the frame
+ down 20 pixels and horizonatally center it on the page. */
+ margin: 20px auto;
+}
+/* Writing a new rule that targets .one and sets its width to 425pixels.*/
+.one {
+    width: 425px;
+    /* Setting the height to 150 pixels */
+    height: 150px;
+    /* Setting the background-color to #efb762 */
+    background-color: #efb762;
+    /* Useing margins to position the .one element on the canvas.
+    Adding the shorthand margin property with a vertical margin of 20px
+    and a horizontal margin of auto. */
+    margin: 20px auto;
+    /* The rectangles are too small and their edges don't have the soft quality of a painting.
+    Increase the area and soften the edges of .one by setting its box-shadow to 0 0 3px #efb762. */
+    box-shadow: 0 0 3px 3px #efb762;
+    /* Use the same box-shadow declaration for .two but change the color from #efb762 to 8f0401 */
+    /* The corners of each rectangle are stil too sharp.
+    ROund each corner of the .one element by 9 pioxels, using the border-radius property.*/
+    border-radius: 9px;
+    /* Rotate each rectangle to give them more of an inperfect, hand painted look. 
+    Use the transform property on the .one selector to rotate it counter clockwise by 0.6 degrees. */
+    transform: rotate(-0.6deg);
+}
+/* Creating a new CSS rule using the .two selector and set its width to 475 pixels. */
+.two {
+    width: 475px;
+    /* Set the height of the .two element to 200 pixels. */
+    height: 200px;
+    /* Set background-color of the .two element to #8f0401 */
+    background-color: #8f0401;
+    /* Center the .tow element by setting its margin to auto */
+    margin: auto;
+    /*  Its helpful to have your margins push in one direction.
+    In this case, the bottom margin of the .one element pushes .two down 20 pixels.
+    In the .two selector, use margin shorthand property to set top margin to 0, horizontal margin to auto, and bottom margin to 20px.
+    This will remove its top margin,horizonally center it andsert its top bottom margin to 20 pizels. */
+    margin-top: 0;
+    margin-bottom: 20px;
+    box-shadow:0 0 3px 3px #8f0401;
+    /* Use the border-radius property on the .two selector to ser its top-left radius and bottome right radius to 8px,
+     and top- right radius and bottom-left radius to  10px. */
+     border-top-left-radius: 8px;
+     border-bottom-right-radius: 8px;
+     border-bottom-left-radius: 10px;
+     border-top-right-radius: 10px;
+     /* Rotate teh .two element clockwise by 0.4 degrees */
+     transform: rotate(0.4deg);
+
+}
+/* You don't alwats have to use pixels when sizing an element.
+Create a new rule .three and set its width to 92%. */
+.three {
+    width: 91%;
+    /* Set the height of ,three to 28%. */
+    height: 28%;
+    /* Set the background-color of ,three to #b20403 */
+    background-color: #b20403;
+    /* Center the ,three element on the canvas by setting its margin to auto. */
+    margin: auto;
+    /* Increase the blur of .three by 2 pixels. */
+    filter: blur(2px);
+    /* Adding a box-shadow to .three with the values 0 0 5px 5px #b20403. */
+    box-shadow: 0 0 5px 5px #b20403;
+    /* THe border-radius property acceptrs up to four values to round the top-left, top-right,
+    bottom-right, bottom-left corners. 
+    Round the top-left corner of .three by 30 pixels , the top-right by 25 pixels.
+    the bottom-right by 60 pixels, and bottom-left by 12 pixels. */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 12px;
+    /* Rotate.three coounter clockwise by 0.2 degrees. */
+
+transform: rotate(-0.2deg);
+}
+/* Create a rule that targets both .one and .two and increases their blur effect by 1 pixel */
+
+.one , .two {
+    filter: blur(1px);
+}

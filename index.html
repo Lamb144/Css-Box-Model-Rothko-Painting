@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rothko Painting</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"><!-- Before you can start styling the div you added, you need to link your CSS to your HTML.-->
     <!-- In the CSS box model, every HTML element is treated as a box with four areas.
     
     Imagine you recieve a box from your favorite online retailer -- the content is the item in the box, or in our case a header, 
@@ -19,8 +19,14 @@ Here the bottom element has a larger top margin.pushing it further doen the page
 </head>
 <body>
     <!-- add a div element in the body. Set the class attribute equal to canvas. This will act as the canvas for your painting. -->
-    <div class="canvas"></div>
-    <!-- Before you can start styling the div you added, you need to link your CSS to your HTML 
-      See line 7.-->
+    <!-- Every painiting need a frame.
+    Wrap the .canvas element in another div. Give that div the frame class. -->
+    <div class="frame"> 
+        <div class="canvas">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+     </div> 
+    </div>
 </body>
 </html>
